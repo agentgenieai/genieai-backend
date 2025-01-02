@@ -6,14 +6,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const server = express();
-server.use(cors({
-  origin: [
-    "https://www.agentgenieai.xyz",
-    "https://genieai-frontend.vercel.app" 
-  ],
-  methods: ["POST"],
-  credentials: true
-}));
+server.use(cors())
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
